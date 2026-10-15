@@ -1,0 +1,430 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plan your Umrah journey and share your travel and accommodation preferences for a tailored quotation.">
+  <title>Plan Your Umrah | Travel.pk</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Travel.pk home">
+      Travel<span>.pk</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#options">Umrah options</a>
+      <a href="#accommodation">Accommodation</a>
+      <a href="#trip-form">Plan your trip</a>
+    </nav>
+
+    <a class="header-cta" href="#trip-form">Get a quotation</a>
+  </header>
+
+  <main id="home">
+
+    <section class="hero">
+      <p class="eyebrow">YOUR UMRAH, YOUR PREFERENCES</p>
+      <h1>Plan your Umrah journey with confidence.</h1>
+      <p class="hero-description">
+        Tell us when you want to travel, how long you want to stay in
+        Makkah and Madinah, and what accommodation suits your family.
+        We'll use your preferences to prepare a quotation.
+      </p>
+      <a class="primary-button" href="#trip-form">
+        Plan my trip <span aria-hidden="true">→</span>
+      </a>
+      <p class="hero-note">No online hotel prices or availability are assumed.</p>
+    </section>
+
+    <section class="options-section" id="options">
+      <div class="section-heading">
+        <p class="eyebrow">EXPLORE YOUR OPTIONS</p>
+        <h2>What are you planning?</h2>
+        <p>Choose the option closest to your needs. You can change it later.</p>
+      </div>
+
+      <div class="option-grid">
+        <button class="option-card" type="button"
+                data-option="Flights" aria-pressed="false">
+          <span class="option-icon" aria-hidden="true">✈</span>
+          <span class="option-title">Flights</span>
+          <span class="option-description">
+            Plan your travel dates and flight requirements.
+          </span>
+          <span class="option-link">Choose option →</span>
+        </button>
+
+        <button class="option-card" type="button"
+                data-option="Family Room" aria-pressed="true">
+          <span class="option-icon" aria-hidden="true">⌂</span>
+          <span class="option-title">Family Room</span>
+          <span class="option-description">
+            Tell us about your group and room arrangements.
+          </span>
+          <span class="option-link">Choose option →</span>
+        </button>
+
+        <button class="option-card" type="button"
+                data-option="Ramadan Travel" aria-pressed="false">
+          <span class="option-icon" aria-hidden="true">☾</span>
+          <span class="option-title">Ramadan Travel</span>
+          <span class="option-description">
+            Share your preferred dates and accommodation needs.
+          </span>
+          <span class="option-link">Choose option →</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="accommodation-section" id="accommodation">
+      <div class="section-heading">
+        <p class="eyebrow">STAY YOUR WAY</p>
+        <h2>Choose what matters to you.</h2>
+        <p>
+          Hotel availability, actual distances and prices must be confirmed
+          in your quotation. Start by telling us your preferences.
+        </p>
+      </div>
+
+      <div class="city-grid">
+        <article class="city-card">
+          <p class="city-label">CITY 01</p>
+          <h3>Makkah</h3>
+          <p>Where would you prefer to stay near Masjid al-Haram?</p>
+          <ul>
+            <li>Walking distance</li>
+            <li>Short drive</li>
+            <li>Flexible distance</li>
+          </ul>
+        </article>
+
+        <article class="city-card">
+          <p class="city-label">CITY 02</p>
+          <h3>Madinah</h3>
+          <p>Choose the distance that works best for your group.</p>
+          <ul>
+            <li>Walking distance</li>
+            <li>Short drive</li>
+            <li>Flexible distance</li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="section-note">
+        These are preference examples, not listings of confirmed hotels.
+      </p>
+    </section>
+
+    <section class="planner-section" id="trip-form">
+      <div class="planner-intro">
+        <p class="eyebrow">YOUR TRIP DETAILS</p>
+        <h2>Let's plan around your needs.</h2>
+        <p>
+          Complete the essentials below. You can leave the optional
+          preferences blank and discuss them with our team.
+        </p>
+
+        <div class="planner-promise">
+          <span aria-hidden="true">✓</span>
+          <p>
+            <strong>Your preferences first</strong><br>
+            No need to choose a hotel before availability is confirmed.
+          </p>
+        </div>
+
+        <div class="planner-promise">
+          <span aria-hidden="true">✓</span>
+          <p>
+            <strong>One clear enquiry</strong><br>
+            Your selected option and trip details stay together.
+          </p>
+        </div>
+      </div>
+
+      <!-- Separate flight form -->
+      <div id="flight-form" hidden>
+        <h3>Search Flights</h3>
+
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="flight-type">Trip type</label>
+            <select id="flight-type">
+              <option>Round Trip</option>
+              <option>One Way</option>
+              <option>Multi-City</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="flight-from">Departure city</label>
+            <input id="flight-from" type="text" placeholder="e.g. Lahore">
+          </div>
+
+          <div class="form-field">
+            <label for="flight-to">Destination city</label>
+            <input id="flight-to" type="text" placeholder="e.g. Jeddah">
+          </div>
+
+          <div class="form-field">
+            <label for="flight-date">Departure date</label>
+            <input id="flight-date" type="date">
+          </div>
+
+          <div class="form-field">
+            <label for="flight-return">Return date</label>
+            <input id="flight-return" type="date">
+          </div>
+
+          <div class="form-field">
+            <label for="flight-passengers">Passengers</label>
+            <select id="flight-passengers">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5+</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="flight-class">Cabin class</label>
+            <select id="flight-class">
+              <option>Economy</option>
+              <option>Premium Economy</option>
+              <option>Business</option>
+              <option>First Class</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="field-hint">
+          Prototype only — no live flight search is connected.
+        </p>
+      </div>
+
+      <!-- Shared Family Room and Ramadan Travel form -->
+      <form id="umrah-form">
+        <input type="hidden" id="selected-option"
+               name="selectedOption" value="Family Room">
+
+        <div class="form-section">
+          <h3>1. When are you travelling?</h3>
+
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="departure-date">Preferred departure date</label>
+              <input type="date" id="departure-date"
+                     name="departureDate" required>
+            </div>
+
+            <div class="form-field">
+              <label for="trip-duration">Total trip duration</label>
+              <select id="trip-duration" name="tripDuration" required>
+                <option value="">Choose duration</option>
+                <option value="7 days">7 days</option>
+                <option value="10 days">10 days</option>
+                <option value="14 days">14 days</option>
+                <option value="21 days">21 days</option>
+                <option value="Other">Other / flexible</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>2. How long in each city?</h3>
+          <p class="field-hint">
+            Enter the number of nights you prefer in each city.
+          </p>
+
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="makkah-nights">Makkah nights</label>
+              <input type="number" id="makkah-nights"
+                     name="makkahNights" min="0" max="60"
+                     value="8" required>
+            </div>
+
+            <div class="form-field">
+              <label for="madinah-nights">Madinah nights</label>
+              <input type="number" id="madinah-nights"
+                     name="madinahNights" min="0" max="60"
+                     value="5" required>
+            </div>
+          </div>
+
+          <p id="duration-message" class="field-hint" aria-live="polite"></p>
+        </div>
+
+        <div class="form-section">
+          <h3>3. Who is travelling?</h3>
+
+          <div class="form-grid three-columns">
+            <div class="form-field">
+              <label for="adults">Adults</label>
+              <input type="number" id="adults" name="adults"
+                     min="1" max="50" value="2" required>
+            </div>
+
+            <div class="form-field">
+              <label for="children">Children</label>
+              <input type="number" id="children" name="children"
+                     min="0" max="50" value="0" required>
+            </div>
+
+            <div class="form-field">
+              <label for="infants">Infants</label>
+              <input type="number" id="infants" name="infants"
+                     min="0" max="20" value="0" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>4. Accommodation preferences</h3>
+          <p class="field-hint">
+            Choose separately for Makkah and Madinah.
+          </p>
+
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="makkah-distance">Preferred distance in Makkah</label>
+              <select id="makkah-distance" name="makkahDistance" required>
+                <option value="">Choose preference</option>
+                <option value="Walking distance">Walking distance</option>
+                <option value="Short drive">Short drive</option>
+                <option value="Flexible">Flexible</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="madinah-distance">Preferred distance in Madinah</label>
+              <select id="madinah-distance" name="madinahDistance" required>
+                <option value="">Choose preference</option>
+                <option value="Walking distance">Walking distance</option>
+                <option value="Short drive">Short drive</option>
+                <option value="Flexible">Flexible</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="makkah-room">Room arrangement in Makkah</label>
+              <select id="makkah-room" name="makkahRoom" required>
+                <option value="">Choose preference</option>
+                <option value="Private room">Private room</option>
+                <option value="Shared or family room">Shared / family room</option>
+                <option value="Separate rooms">Separate rooms</option>
+                <option value="Flexible">Flexible</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="madinah-room">Room arrangement in Madinah</label>
+              <select id="madinah-room" name="madinahRoom" required>
+                <option value="">Choose preference</option>
+                <option value="Private room">Private room</option>
+                <option value="Shared or family room">Shared / family room</option>
+                <option value="Separate rooms">Separate rooms</option>
+                <option value="Flexible">Flexible</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>5. Anything else? <span class="optional-label">Optional</span></h3>
+
+          <div class="form-field">
+            <label for="budget">Budget preference</label>
+            <select id="budget" name="budget">
+              <option value="">Prefer to discuss</option>
+              <option value="Economy">Economy</option>
+              <option value="Mid-range">Mid-range</option>
+              <option value="Premium">Premium</option>
+              <option value="Flexible">Flexible</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="additional-requirements">Additional requirements</label>
+            <textarea id="additional-requirements"
+                      name="additionalRequirements" rows="3"
+                      placeholder="For example, accessibility needs or family arrangements"></textarea>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>6. How can we contact you?</h3>
+
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="customer-name">Full name</label>
+              <input type="text" id="customer-name" name="customerName"
+                     autocomplete="name" required>
+            </div>
+
+            <div class="form-field">
+              <label for="customer-email">Email address</label>
+              <input type="email" id="customer-email" name="customerEmail"
+                     autocomplete="email" required>
+            </div>
+
+            <div class="form-field">
+              <label for="customer-phone">Phone number</label>
+              <input type="tel" id="customer-phone" name="customerPhone"
+                     autocomplete="tel" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-disclaimer">
+          <strong>What happens next?</strong>
+          <p>
+            This prototype does not submit a real enquiry. In the live service,
+            your preferences would be used to prepare a quotation, subject to
+            supplier availability and confirmation of the final arrangements
+            before payment.
+          </p>
+        </div>
+
+        <button class="submit-button" type="submit">
+          Review my trip request →
+        </button>
+        <p id="form-message" class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#home">Travel<span>.pk</span></a>
+    <p>A clearer way to share your Umrah travel preferences.</p>
+    <a href="#home">Back to top ↑</a>
+    <p class="footer-disclaimer">
+      Independent prototype for product assessment purposes.
+    </p>
+  </footer>
+
+  <!-- Review popup -->
+  <div class="review-modal" id="review-modal" hidden>
+    <section class="review-dialog" role="dialog" aria-modal="true"
+             aria-labelledby="review-title">
+      <button class="review-close" id="review-close"
+              type="button" aria-label="Close review">×</button>
+      <p class="eyebrow">YOUR REQUEST SUMMARY</p>
+      <h2 id="review-title">Family Room</h2>
+      <p class="review-intro">
+        Check the details below. This is a local prototype; nothing will be submitted.
+      </p>
+      <dl class="review-details" id="review-details"></dl>
+      <button class="submit-button" id="review-done" type="button">Done</button>
+    </section>
+  </div>
+
+</body>
+</html>
